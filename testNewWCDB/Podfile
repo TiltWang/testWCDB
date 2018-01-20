@@ -6,5 +6,5 @@ target 'testNewWCDB' do
   # use_frameworks!
 
   # Pods for testNewWCDB
-pod 'WCDB'
+pod 'WCDB', '~> 1.0.6'
 end

@@ -92,7 +92,8 @@ static WCTDatabase *database = nil;
     }
     TWPerson *person = [[TWPerson alloc] init];
     person.name = name;
-    BOOL result = [database updateTable:TABLE_WCDB_NAME onProperties:TWPerson.name withRow:@[name] where:TWPerson.pID == pID];
+    BOOL result =[database updateRowsInTable:TABLE_WCDB_NAME onProperty:TWPerson.name withValue:name where:TWPerson.pID == pID];
+//    BOOL result = [database updateTable:TABLE_WCDB_NAME onProperties:TWPerson.name withRow:@[name] where:TWPerson.pID == pID];
     return result;
 }
 + (BOOL)updateData:(TWPerson *)person
@@ -100,7 +101,8 @@ static WCTDatabase *database = nil;
     if (database == nil) {
         [self creatDatabase];
     }
-    BOOL result = [database updateTable:TABLE_WCDB_NAME onProperties:TWPerson.AllProperties withObject:person];
+    BOOL result = [database updateAllRowsInTable:TABLE_WCDB_NAME onProperties:TWPerson.AllProperties withObject:person];
+//    BOOL result = [database updateTable:TABLE_WCDB_NAME onProperties:TWPerson.AllProperties withObject:person];
     ///下面这些方法都失效了
 //    BOOL result = [database updateTable:TABLE_WCDB_NAME onProperties:TWPerson.name withRow:@[person.name] where:TWPerson.pID == person.pID];
 //    [database updateTable:TABLE_WCDB_NAME onProperties:TWPerson.age withRow:@[ [NSNumber numberWithInteger:person.age] ] where:TWPerson.pID == person.pID];

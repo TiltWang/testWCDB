@@ -42,6 +42,7 @@ struct sqliterk_notify {
                          sqliterk_table *table,
                          sqliterk_column *column);
     void (*onEndParseTable)(sqliterk *rk, sqliterk_table *table);
+    void (*didParsePage)(sqliterk *rk, int pageno);
 };
 int sqliterk_register_notify(sqliterk *rk, sqliterk_notify notify);
 
@@ -76,6 +77,16 @@ int sqliterk_output(sqliterk *rk,
                     sqlite3 *db,
                     sqliterk_master_info *master,
                     unsigned int flags);
+int sqliterk_output_cb(sqliterk *rk,
+                       sqlite3 *db,
+                       sqliterk_master_info *master,
+                       unsigned int flags,
+                       int (*callback)(void *user,
+                                       sqliterk *rk,
+                                       sqliterk_table *table,
+                                       sqliterk_column *column),
+                       void *user);
+void sqliterk_cancel(sqliterk *rk);
 int sqliterk_make_master(const char **tables,
                          int num_tables,
                          sqliterk_master_info **out_master);
@@ -131,7 +142,7 @@ double sqliterk_column_number(sqliterk_column *column, int index);
 const char *sqliterk_column_text(sqliterk_column *column, int index);
 const void *sqliterk_column_binary(sqliterk_column *column, int index);
 int sqliterk_column_bytes(sqliterk_column *column, int index);
-int sqliterk_column_rowid(sqliterk_column *column);
+int64_t sqliterk_column_rowid(sqliterk_column *column);
 
 #define SQLITERK_INTEGRITY_HEADER 0x0001
 #define SQLITERK_INTEGRITY_DATA 0x0002
@@ -164,6 +175,8 @@ int sqliterk_register(sqliterk_os os);
 #define SQLITERK_SHORT_READ 5
 #define SQLITERK_DAMAGED 6
 #define SQLITERK_DISCARD 7
+#define SQLITERK_CANCELLED 8
+#define SQLITERK_IGNORE 100
 const char *sqliterk_description(int result);
 
 #ifndef SQLITRK_CONFIG_DEFAULT_PAGESIZE
