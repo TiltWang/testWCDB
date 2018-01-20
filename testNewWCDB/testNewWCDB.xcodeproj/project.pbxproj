@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1CB3064F10692E67666DBEFB /* libPods-testNewWCDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4170B235CF08B40CB666381C /* libPods-testNewWCDB.a */; };
+		B7BB14812012DE0C0096FBD2 /* TWPersonDatabase.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7BB147E2012DE0B0096FBD2 /* TWPersonDatabase.mm */; };
+		B7BB14822012DE0C0096FBD2 /* TWPerson.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7BB147F2012DE0B0096FBD2 /* TWPerson.mm */; };
 		B7DE44C21F6FB8FE00F0D691 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DE44C11F6FB8FE00F0D691 /* main.m */; };
 		B7DE44C51F6FB8FE00F0D691 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DE44C41F6FB8FE00F0D691 /* AppDelegate.m */; };
 		B7DE44C81F6FB8FE00F0D691 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7DE44C71F6FB8FE00F0D691 /* ViewController.mm */; };
 		B7DE44CB1F6FB8FE00F0D691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DE44C91F6FB8FE00F0D691 /* Main.storyboard */; };
 		B7DE44CD1F6FB8FE00F0D691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7DE44CC1F6FB8FE00F0D691 /* Assets.xcassets */; };
 		B7DE44D01F6FB8FE00F0D691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DE44CE1F6FB8FE00F0D691 /* LaunchScreen.storyboard */; };
-		B7DE44DB1F6FB99300F0D691 /* TWPerson.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7DE44D81F6FB99300F0D691 /* TWPerson.mm */; };
-		B7DE44DC1F6FB99300F0D691 /* TWPersonDatabase.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7DE44DA1F6FB99300F0D691 /* TWPersonDatabase.mm */; };
 		B7EEED0D1F70EEF7008BF42F /* TWTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7EEED0C1F70EEF7008BF42F /* TWTableViewController.mm */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +23,10 @@
 		1BB8E2E1B23A22F4A19A60D6 /* Pods-testNewWCDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testNewWCDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-testNewWCDB/Pods-testNewWCDB.release.xcconfig"; sourceTree = "<group>"; };
 		4170B235CF08B40CB666381C /* libPods-testNewWCDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testNewWCDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F4E633D209AAF2CA9AA3A54 /* Pods-testNewWCDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testNewWCDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testNewWCDB/Pods-testNewWCDB.debug.xcconfig"; sourceTree = "<group>"; };
+		B7BB147D2012DE0B0096FBD2 /* TWPersonDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPersonDatabase.h; sourceTree = "<group>"; };
+		B7BB147E2012DE0B0096FBD2 /* TWPersonDatabase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TWPersonDatabase.mm; sourceTree = "<group>"; };
+		B7BB147F2012DE0B0096FBD2 /* TWPerson.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TWPerson.mm; sourceTree = "<group>"; };
+		B7BB14802012DE0B0096FBD2 /* TWPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPerson.h; sourceTree = "<group>"; };
 		B7DE44BD1F6FB8FE00F0D691 /* testNewWCDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testNewWCDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DE44C11F6FB8FE00F0D691 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7DE44C31F6FB8FE00F0D691 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,10 +37,6 @@
 		B7DE44CC1F6FB8FE00F0D691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7DE44CF1F6FB8FE00F0D691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7DE44D11F6FB8FF00F0D691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7DE44D71F6FB99300F0D691 /* TWPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWPerson.h; path = ../../testWCDB/testWCDB/TWPerson.h; sourceTree = "<group>"; };
-		B7DE44D81F6FB99300F0D691 /* TWPerson.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TWPerson.mm; path = ../../testWCDB/testWCDB/TWPerson.mm; sourceTree = "<group>"; };
-		B7DE44D91F6FB99300F0D691 /* TWPersonDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWPersonDatabase.h; path = ../../testWCDB/testWCDB/TWPersonDatabase.h; sourceTree = "<group>"; };
-		B7DE44DA1F6FB99300F0D691 /* TWPersonDatabase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TWPersonDatabase.mm; path = ../../testWCDB/testWCDB/TWPersonDatabase.mm; sourceTree = "<group>"; };
 		B7DE44DD1F6FBAC900F0D691 /* libWCDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWCDB.a; path = "../../../../Library/Developer/Xcode/DerivedData/testNewWCDB-cwxiebxxqfcvnehampphanixlaec/Build/Products/Debug-iphonesimulator/WCDB/libWCDB.a"; sourceTree = "<group>"; };
 		B7DE44DF1F6FBAD300F0D691 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		B7EEED0B1F70EEF7008BF42F /* TWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTableViewController.h; sourceTree = "<group>"; };
@@ -101,10 +101,10 @@
 				B7DE44C71F6FB8FE00F0D691 /* ViewController.mm */,
 				B7EEED0B1F70EEF7008BF42F /* TWTableViewController.h */,
 				B7EEED0C1F70EEF7008BF42F /* TWTableViewController.mm */,
-				B7DE44D71F6FB99300F0D691 /* TWPerson.h */,
-				B7DE44D81F6FB99300F0D691 /* TWPerson.mm */,
-				B7DE44D91F6FB99300F0D691 /* TWPersonDatabase.h */,
-				B7DE44DA1F6FB99300F0D691 /* TWPersonDatabase.mm */,
+				B7BB14802012DE0B0096FBD2 /* TWPerson.h */,
+				B7BB147F2012DE0B0096FBD2 /* TWPerson.mm */,
+				B7BB147D2012DE0B0096FBD2 /* TWPersonDatabase.h */,
+				B7BB147E2012DE0B0096FBD2 /* TWPersonDatabase.mm */,
 				B7DE44C91F6FB8FE00F0D691 /* Main.storyboard */,
 				B7DE44CC1F6FB8FE00F0D691 /* Assets.xcassets */,
 				B7DE44CE1F6FB8FE00F0D691 /* LaunchScreen.storyboard */,
@@ -249,9 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7DE44C81F6FB8FE00F0D691 /* ViewController.mm in Sources */,
-				B7DE44DC1F6FB99300F0D691 /* TWPersonDatabase.mm in Sources */,
-				B7DE44DB1F6FB99300F0D691 /* TWPerson.mm in Sources */,
 				B7DE44C51F6FB8FE00F0D691 /* AppDelegate.m in Sources */,
+				B7BB14812012DE0C0096FBD2 /* TWPersonDatabase.mm in Sources */,
+				B7BB14822012DE0C0096FBD2 /* TWPerson.mm in Sources */,
 				B7EEED0D1F70EEF7008BF42F /* TWTableViewController.mm in Sources */,
 				B7DE44C21F6FB8FE00F0D691 /* main.m in Sources */,
 			);
